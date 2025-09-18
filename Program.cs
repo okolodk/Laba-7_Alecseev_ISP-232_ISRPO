@@ -47,6 +47,36 @@
             Console.WriteLine($"Текущий баланс: {this.Balance} P");
         }
     }
+
+    class Car
+    {
+        public string model;
+        public int speed;
+        public int maxSpeed;
+
+        public Car(string model, int maxSpeed)
+        {
+            this.model = model;
+            this.maxSpeed = maxSpeed;
+            this.speed = 0;
+
+        }
+
+        public void Accelerate(int delta)
+        {
+            if (this.speed + delta <= maxSpeed)
+            {
+                this.speed += delta;
+                Console.WriteLine($"Модель: {this.model}. Текущая скорость {this.speed}");
+            }
+            else
+            {
+                Console.WriteLine("Мощности не хватит.");
+            }
+        }
+
+        public void Brake() { this.speed = 0; Console.WriteLine($"После торможения скорость {this.speed}"); }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -63,7 +93,11 @@
             //schot1.Withdraw(500);
             //schot1.PrintBalance();
 
-
+            // Задание 3
+            //Car car1 = new Car("Tesla Model S", 120);
+            //car1.Accelerate(100);
+            //car1.Accelerate(20);
+            //car1.Brake();
         }
     }
 }
