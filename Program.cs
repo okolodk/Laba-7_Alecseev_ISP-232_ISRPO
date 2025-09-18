@@ -1,4 +1,6 @@
-﻿namespace Laba_7_Alecseev_ISP_232_ISRPO
+﻿using System;
+
+namespace Laba_7_Alecseev_ISP_232_ISRPO
 {
     class Book
     {
@@ -77,6 +79,24 @@
 
         public void Brake() { this.speed = 0; Console.WriteLine($"После торможения скорость {this.speed}"); }
     }
+    
+    class Dice 
+    {
+        private int _sides;
+
+        public Dice(int sides = 6)
+        {
+            this._sides = sides;
+
+        }
+
+        public void Roll()
+        {
+            Random random = new Random();
+            Console.WriteLine($"{_sides}-гранный кубик: {random.Next(1, _sides + 1)},{random.Next(1, _sides + 1)},{random.Next(1, _sides + 1)}");
+        }
+
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -98,6 +118,12 @@
             //car1.Accelerate(100);
             //car1.Accelerate(20);
             //car1.Brake();
+
+            // Задание 4
+            //Dice kub1 = new Dice();
+            //Dice kub2 = new Dice(12);
+            //kub1.Roll();
+            //kub2.Roll();
         }
     }
 }
