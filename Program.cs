@@ -28,6 +28,25 @@
             Console.WriteLine($"Название: \"{Title}\", Автор: {Author}, Год: {Year}, Доступна: {b}");
         }
     }
+
+    class BankAccount
+    {
+        public string AccountNumber = "0000 0000 0000 0000";
+        private decimal Balance = 0m;
+
+        public void Deposit(decimal amount) { if (this.Balance >= 0) { this.Balance += amount; } }
+        public void Withdraw(decimal amount)
+        {
+            if (amount > 0 && amount < this.Balance)
+            {
+                this.Balance -= amount;
+            }
+        }
+        public void PrintBalance()
+        {
+            Console.WriteLine($"Текущий баланс: {this.Balance} P");
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -37,6 +56,14 @@
             //book1.PrintInfo();
             //Book book2 = new Book("Война и мир", "Толстой", 1869, true);
             //book2.PrintInfo();
+
+            // Задание 2
+            //BankAccount schot1 = new BankAccount();
+            //schot1.Deposit(1000);
+            //schot1.Withdraw(500);
+            //schot1.PrintBalance();
+
+
         }
     }
 }
