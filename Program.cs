@@ -97,6 +97,21 @@ namespace Laba_7_Alecseev_ISP_232_ISRPO
         }
 
     }
+    
+    class Character 
+    {
+        public int Health;
+        public int Mana;
+
+        public Character(int health, int mana)
+        {
+            this.Health = health;
+            this.Mana = mana;
+        }
+        public void Ataka() {
+            Console.WriteLine("Ataka");
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -124,6 +139,12 @@ namespace Laba_7_Alecseev_ISP_232_ISRPO
             //Dice kub2 = new Dice(12);
             //kub1.Roll();
             //kub2.Roll();
+
+            //Задание 5
+            //Character voin = new(600, 300);
+            //Character mag = new(250, 1000);
+            //Character lechnek = new(400, 600);
+
         }
     }
 }
